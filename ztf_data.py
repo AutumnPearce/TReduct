@@ -2,11 +2,14 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import math
+import os
 
 from sklearn.manifold import TSNE
 from sklearn.decomposition import TruncatedSVD
 from sklearn.preprocessing import minmax_scale
 from sklearn.model_selection import train_test_split as sklearn_train_test_split
+
+os.system('wget -O triplets.norm.npy https://storage.googleapis.com/ztf-braai/braai.triplets.norm.programid1.npy')
 
 class ZtfData:
     IMG_SHAPE = [63,63]
